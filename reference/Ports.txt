@@ -1,0 +1,55 @@
+Last updated: 2011/11/21
+~Philip Peng
+
+Port info
+====================================
+
+DDRA/PORTA	[0-7]
+GPIO, CPU expansion
+
+DDRB/PORTB	[0-7]
+GPIO, CPU expansion
+
+DDRAD/PTAD	[0-7]
+GPIO, AD (analog-to-digital) converter
+ATDDIEN=1 if use for digital input buffer
+
+DDRE/PORTE	[0-4]
+GPIO, Special functions
+PE0 and PE1 can only be inputs
+
+DDRM/PTM	[0-5]
+GPIO, CAN and SPI interface
+
+DDRP/PTP	[0-5]
+GPIO, PWM (pulse-width modulation)
+
+DDRS/PTS	[0-3]
+GPIO, SCI (serial communication interface)
+
+DDRT/PTT	[0-7]
+GPIO, IOC (input/output compare) for timer
+MODRR = 0 for timer, 1 for PWM
+
+DDRJ/PTJ	[6,7] - use
+GPIO, CPU interrupting
+
+====================================
+Max: (6 + 6) x 4 = 48 -> 12x12 display
+
+Output:
+A[8] + B[8] + AD[8] + T[8] + M[6] + P[6] + S[4] + J[2]= 50
+
+Input:
+(need 5 bit: 3 bit action, 2 bit player)
+E[5] = 5
+
+====================================
+
+Ideally: 16 + 16 -> 16x16 display
+
+Output:
+A[8] + B[8] + AD[8] + T[8] = 32
+
+Input:
+M[6] = 6
